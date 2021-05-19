@@ -10,7 +10,7 @@ place_seqs.py -s study_seqs.fna -o placed_seqs.tre -p 1 -r /path/to/16s_cnv_corr
 
 Afterwards, the 16S.txt.gz file has to be used in the hidden state prediction using `hsp.py` using the `--observed_trait_table` option.
 ```
-hsp.py -i 16S -t placed_seqs.tre -o marker_nsti_predicted.tsv.gz -p 1 -n --observed_trait_table /path/to/16s_cnv_correction_databases/16S.txt.gz
+hsp.py -t placed_seqs.tre -o marker_nsti_predicted.tsv.gz -p 1 -n --observed_trait_table /path/to/16s_cnv_correction_databases/16S.txt.gz
 ```
 
 Both datasets use the same sequences, however the trees for sequence placement were inferred using different software (iqtree and raxml-ng).
